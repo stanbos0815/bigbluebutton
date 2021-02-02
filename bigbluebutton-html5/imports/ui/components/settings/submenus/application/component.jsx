@@ -256,7 +256,25 @@ class ApplicationMenu extends BaseMenu {
               </div>
             </div>
           </div>
-
+          <div className={styles.row}>
+            <div className={styles.col} aria-hidden="true">
+              <div className={styles.formElement}>
+                <label className={styles.label}>
+                  {intl.formatMessage(intlMessages.darkModeLabel)}
+                </label>
+              </div>
+            </div>
+            <div className={styles.col}>
+              <div className={cx(styles.formElement, styles.pullContentRight)}>
+                <Toggle
+                    icons={false}
+                    defaultChecked={false}
+                    onChange={() => this.handleToggle('animations')}
+                    ariaLabel={intl.formatMessage(intlMessages.darkModeLabel)}
+                />
+              </div>
+            </div>
+          </div>
           {CHAT_ENABLED
             ? (<Fragment>
               <div className={styles.row}>
