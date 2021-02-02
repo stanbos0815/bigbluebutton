@@ -18,6 +18,10 @@ const intlMessages = defineMessages({
     id: 'app.submenu.application.animationsLabel',
     description: 'animations label',
   },
+  darkModeLabel: {
+    id: 'app.submenu.application.darkModeLabel',
+    description: 'dark mode label',
+  },
   audioAlertLabel: {
     id: 'app.submenu.application.audioAlertLabel',
     description: 'audio notification label',
