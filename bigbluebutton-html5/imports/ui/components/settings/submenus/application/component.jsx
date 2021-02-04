@@ -269,7 +269,7 @@ class ApplicationMenu extends BaseMenu {
                 <Toggle
                     icons={false}
                     defaultChecked={this.state.settings.darkMode}
-                    onChange={() => this.handleDarkMode()}
+                    onChange={() => this.handleToggle('darkMode')}
                     ariaLabel={intl.formatMessage(intlMessages.darkModeLabel)}
                 />
               </div>
