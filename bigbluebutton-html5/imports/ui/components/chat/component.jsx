@@ -1,5 +1,4 @@
 import React, { memo } from 'react';
-import {useState} from 'react';
 import PropTypes from 'prop-types';
 import { defineMessages, injectIntl } from 'react-intl';
 import injectWbResizeEvent from '/imports/ui/components/presentation/resize-wrapper/component';
@@ -11,6 +10,7 @@ import MessageForm from './message-form/container';
 import MessageList from './message-list/container';
 import ChatDropdown from './chat-dropdown/component';
 import {ThemeProvider} from 'styled-components';
+import { getTheme } from "/imports/ui/getTheme";
 
 const ELEMENT_ID = 'chat-messages';
 
