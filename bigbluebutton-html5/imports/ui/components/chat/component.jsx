@@ -9,6 +9,7 @@ import { styles } from './styles.scss';
 import MessageForm from './message-form/container';
 import MessageList from './message-list/container';
 import ChatDropdown from './chat-dropdown/component';
+import {ThemeProvider} from 'styled-components';
 
 const ELEMENT_ID = 'chat-messages';
 
@@ -48,6 +49,7 @@ const Chat = (props) => {
   const CLOSE_CHAT_AK = shortcuts.closePrivateChat;
 
   return (
+    <ThemeProvider theme={themeMode}>
     <div
       data-test="publicChat"
       className={styles.chat}
@@ -121,6 +123,7 @@ const Chat = (props) => {
         partnerIsLoggedOut={partnerIsLoggedOut}
       />
     </div>
+    </ThemeProvider>
   );
 };
 

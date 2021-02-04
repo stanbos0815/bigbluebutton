@@ -7,6 +7,7 @@ import Storage from '/imports/ui/services/storage/session';
 import { meetingIsBreakout } from '/imports/ui/components/app/service';
 import Chat from './component';
 import ChatService from './service';
+import Settings from '/imports/ui/services/settings';
 
 const CHAT_CONFIG = Meteor.settings.public.chat;
 const PUBLIC_CHAT_KEY = CHAT_CONFIG.public_id;
@@ -59,6 +60,7 @@ class ChatContainer extends PureComponent {
 
 export default injectIntl(withTracker(({ intl }) => {
   const chatID = Session.get('idChatOpen');
+  const themeMode = Settings.application.darkMode? THEMES.DARK : THEMES.BASIC
   let messages = [];
   let isChatLocked = ChatService.isChatLocked(chatID);
   let title = intl.formatMessage(intlMessages.titlePublic);
@@ -166,6 +168,7 @@ export default injectIntl(withTracker(({ intl }) => {
 
   return {
     chatID,
+    themeMode,
     chatName,
     title,
     messages,
