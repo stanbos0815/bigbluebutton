@@ -26,6 +26,7 @@ const intlMessages = defineMessages({
 const Chat = (props) => {
   const {
     chatID,
+    themeMode,
     chatName,
     title,
     messages,
