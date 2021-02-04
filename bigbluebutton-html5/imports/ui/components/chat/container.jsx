@@ -8,6 +8,7 @@ import { meetingIsBreakout } from '/imports/ui/components/app/service';
 import Chat from './component';
 import ChatService from './service';
 import Settings from '/imports/ui/services/settings';
+import THEMES from '/imports/ui/constants/themes';
 
 const CHAT_CONFIG = Meteor.settings.public.chat;
 const PUBLIC_CHAT_KEY = CHAT_CONFIG.public_id;
