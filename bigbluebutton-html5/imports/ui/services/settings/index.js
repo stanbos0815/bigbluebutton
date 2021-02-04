@@ -53,8 +53,8 @@ class Settings {
 
     this.save();
   }
-  handleDarkMode(){
-    if(this.state.settings.darkMode){
+  handleDarkMode(darkMode){
+    if(darkMode){
     document.documentElement.style.setProperty('--color-chat', getComputedStyle(document.body).getPropertyValue('--color-black'));
     }
     else{
@@ -62,13 +62,15 @@ class Settings {
     }
   }
   save() {
-    console.log(Storage.getItem("settings"+"darkMode"))
+    /*console.log(Storage.getItem("settings"+"darkMode"))
     console.log(this["darkMode"].value)
     if(Storage.getItem("settings"+"darkMode")!==this["darkMode"].value){
-      this.handleDarkMode();
-    }
+      this.handleDarkMode(this["darkMode"].value);
+    }*/
     Object.keys(this).forEach((k) => {
       console.log(k);
+      console.log(`settings${k}`);
+      console.log(this[k].value);
       Storage.setItem(`settings${k}`, this[k].value);
     });
 
