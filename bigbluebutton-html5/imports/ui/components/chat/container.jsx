@@ -61,7 +61,7 @@ class ChatContainer extends PureComponent {
 
 export default injectIntl(withTracker(({ intl }) => {
   const chatID = Session.get('idChatOpen');
-  const themeMode = Settings.application.darkMode? THEMES.DARK : THEMES.BASIC
+  // const themeMode = Settings.application.darkMode? THEMES.DARK : THEMES.BASIC
   let messages = [];
   let isChatLocked = ChatService.isChatLocked(chatID);
   let title = intl.formatMessage(intlMessages.titlePublic);
@@ -169,7 +169,7 @@ export default injectIntl(withTracker(({ intl }) => {
 
   return {
     chatID,
-    themeMode,
+    // themeMode,
     chatName,
     title,
     messages,

@@ -1,4 +1,5 @@
 import React, { memo } from 'react';
+import {useState} from 'react';
 import PropTypes from 'prop-types';
 import { defineMessages, injectIntl } from 'react-intl';
 import injectWbResizeEvent from '/imports/ui/components/presentation/resize-wrapper/component';
@@ -26,7 +27,7 @@ const intlMessages = defineMessages({
 const Chat = (props) => {
   const {
     chatID,
-    themeMode,
+    // themeMode,
     chatName,
     title,
     messages,
@@ -50,7 +51,8 @@ const Chat = (props) => {
   const CLOSE_CHAT_AK = shortcuts.closePrivateChat;
 
   return (
-    <ThemeProvider theme={themeMode}>
+    <ThemeProvider theme={getTheme()}>
+    {/* <ThemeProvider theme={themeMode}> */}
     <div
       data-test="publicChat"
       className={styles.chat}
