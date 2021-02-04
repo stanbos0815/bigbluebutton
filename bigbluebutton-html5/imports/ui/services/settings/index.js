@@ -53,9 +53,22 @@ class Settings {
 
     this.save();
   }
-
+  handleDarkMode(){
+    if(this.state.settings.darkMode){
+    document.documentElement.style.setProperty('--color-chat', getComputedStyle(document.body).getPropertyValue('--color-black'));
+    }
+    else{
+      document.documentElement.style.setProperty('--color-chat', getComputedStyle(document.body).getPropertyValue('--color-white'));
+    }
+  }
   save() {
+    console.log(Storage.getItem("settings"+"darkMode"))
+    console.log(this["darkMode"].value)
+    if(Storage.getItem("settings"+"darkMode")!==this["darkMode"].value){
+      this.handleDarkMode();
+    }
     Object.keys(this).forEach((k) => {
+      console.log(k);
       Storage.setItem(`settings${k}`, this[k].value);
     });
 
