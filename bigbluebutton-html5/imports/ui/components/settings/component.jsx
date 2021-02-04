@@ -118,13 +118,8 @@ class Settings extends Component {
   }
 
   handleUpdateSettings(key, newSettings) {
-    console.log( "key "+key);
-    console.log(expandedLog(newSettings,100,0));
-    console.log(expandedLog(this.state,100,0));
     const settings = this.state;
-    console.log("settings.current[key] "+settings.current[key]);
     settings.current[key] = newSettings;
-    console.log("settings.current[key] 2 "+settings.current[key]);
     this.setState(settings);
   }
 
@@ -239,21 +234,6 @@ class Settings extends Component {
         {this.renderModalContent()}
       </Modal>
     );
-  }
-}
-function expandedLog(item, maxDepth = 100, depth = 0){
-  if (depth > maxDepth ) {
-      console.log(item);
-      return;
-  }
-  if (typeof item === 'object' && item !== null) {
-      Object.entries(item).forEach(([key, value]) => {
-          console.group(key + ' : ' +(typeof value));
-          expandedLog(value, maxDepth, depth + 1);
-          console.groupEnd();
-      });
-  } else {
-      console.log(item);
   }
 }
 Settings.propTypes = propTypes;

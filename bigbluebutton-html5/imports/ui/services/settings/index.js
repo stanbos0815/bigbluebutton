@@ -62,11 +62,10 @@ class Settings {
     }
   }
   save() {
-    /*console.log(Storage.getItem("settings"+"darkMode"))
-    console.log(this["darkMode"].value)
-    if(Storage.getItem("settings"+"darkMode")!==this["darkMode"].value){
-      this.handleDarkMode(this["darkMode"].value);
-    }*/
+    console.log(expandedLog(Storage.getItem("settings_application"),100,0));
+    if(Storage.getItem("settings_application").value.darkMode!==this["_application"].value.darkMode){
+      this.handleDarkMode(this["_application"].value.darkMode);
+    }
     Object.keys(this).forEach((k) => {
       console.log(k);
       console.log(`settings${k}`);
@@ -89,6 +88,20 @@ class Settings {
     });
   }
 }
-
+function expandedLog(item, maxDepth = 100, depth = 0){
+  if (depth > maxDepth ) {
+      console.log(item);
+      return;
+  }
+  if (typeof item === 'object' && item !== null) {
+      Object.entries(item).forEach(([key, value]) => {
+          console.group(key + ' : ' +(typeof value));
+          expandedLog(value, maxDepth, depth + 1);
+          console.groupEnd();
+      });
+  } else {
+      console.log(item);
+  }
+}
 const SettingsSingleton = new Settings(Meteor.settings.public.app.defaultSettings);
 export default SettingsSingleton;
