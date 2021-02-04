@@ -17,6 +17,9 @@ export default class BaseMenu extends React.Component {
       this.handleUpdateSettings(this.state.settingsName, this.state.settings);
     });
   }
+  handleDarkMode(){
+    document.documentElement.style.setProperty('--color-white', '#000000');
+  }
 }
 function expandedLog(item, maxDepth = 100, depth = 0){
   if (depth > maxDepth ) {

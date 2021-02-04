@@ -268,8 +268,8 @@ class ApplicationMenu extends BaseMenu {
               <div className={cx(styles.formElement, styles.pullContentRight)}>
                 <Toggle
                     icons={false}
-                    defaultChecked={false}
-                    onChange={() => this.handleToggle('darkMode')}
+                    defaultChecked={this.state.settings.darkMode}
+                    onChange={() => this.handleDarkMode()}
                     ariaLabel={intl.formatMessage(intlMessages.darkModeLabel)}
                 />
               </div>
