@@ -63,7 +63,7 @@ class Settings {
   }
   save() {
     console.log(expandedLog(Storage.getItem("settings_application"),100,0));
-    if(Storage.getItem("settings_application").value.darkMode!==this["_application"].value.darkMode){
+    if(Storage.getItem("settings_application").darkMode!==this["_application"].value.darkMode){
       this.handleDarkMode(this["_application"].value.darkMode);
     }
     Object.keys(this).forEach((k) => {
