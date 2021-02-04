@@ -212,8 +212,16 @@ class ApplicationMenu extends BaseMenu {
   }
 
   handleDarkMode(key){
+    console.log(getComputedStyle(document.body).getPropertyValue('--color-black'));
+    console.log(this.state.settings.darkMode);
     this.handleToggle(key);
-    document.documentElement.style.setProperty('--color-chat', document.documentElement.style.getPropertyValue('--color-black'));
+    console.log(this.state.settings.darkMode);
+    if(this.state.settings.darkMode){
+    document.documentElement.style.setProperty('--color-chat', getComputedStyle(document.body).getPropertyValue('--color-black'));
+    }
+    else{
+      document.documentElement.style.setProperty('--color-chat', getComputedStyle(document.body).getPropertyValue('--color-white'));
+    }
   }
 
   render() {
