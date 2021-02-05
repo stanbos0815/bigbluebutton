@@ -211,19 +211,6 @@ class ApplicationMenu extends BaseMenu {
     this.handleUpdateSettings('application', obj.settings);
   }
 
-  handleDarkMode(key){
-    console.log(getComputedStyle(document.body).getPropertyValue('--color-black'));
-    console.log(this.state.settings.darkMode);
-    this.handleToggle(key);
-    console.log(this.state.settings.darkMode);
-    if(this.state.settings.darkMode){
-    document.documentElement.style.setProperty('--color-chat', getComputedStyle(document.body).getPropertyValue('--color-black'));
-    }
-    else{
-      document.documentElement.style.setProperty('--color-chat', getComputedStyle(document.body).getPropertyValue('--color-white'));
-    }
-  }
-
   render() {
     const { availableLocales, intl } = this.props;
     const { isLargestFontSize, isSmallestFontSize, settings } = this.state;
@@ -282,7 +269,7 @@ class ApplicationMenu extends BaseMenu {
                 <Toggle
                     icons={false}
                     defaultChecked={this.state.settings.darkMode}
-                    onChange={() => this.handleDarkMode('darkMode')}
+                    onChange={() => this.handleToggle('darkMode')}
                     ariaLabel={intl.formatMessage(intlMessages.darkModeLabel)}
                 />
               </div>
