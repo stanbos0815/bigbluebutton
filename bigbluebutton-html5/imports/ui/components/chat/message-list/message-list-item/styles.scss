@@ -28,7 +28,8 @@
 
 .systemMessage {
   // background: var(--systemMessage-background-color);
-  background: var(--systemMessage-background-color-darkmode);
+  color: var(--systemMessage-darkmode-color);
+  background: var(--systemMessage-darkmode-background-color);
   border: 1px solid var(--systemMessage-border-color);
   border-radius: var(--border-radius);
   font-weight: var(--btn-font-weight);

@@ -9,6 +9,7 @@
   --color-gray-darkest: #111111;
   --color-gray-lighter: #a7b3bd;
   --color-gray-lightest: #d4d9df;
+  
 
   --color-blue-light: #54a1f3;
   --color-blue-lighter: #92BCEA;
@@ -19,7 +20,7 @@
   --color-danger: #DF2721;
   --color-warning: purple;
 
-  --color-background: var(--color-gray-dark);
+  --color-background: var(--color-standard-background);
 
   --color-text: var(--color-gray);
   --color-heading: var(--color-gray-dark);
@@ -33,7 +34,11 @@
 
   --color-chat: var(--color-white);
   
-  --color-darkmode-background: #2b2b2b;
+  --color-standard-background:#06172a;
 
-  --systemMessage-background-color-darkmode: var(--color-white);
+  --color-darkmode-background: #2b2b2b;
+  --color-darkmode-chat: #313335;
+  --systemMessage-darkmode-background-color: var(--color-white);
+  --systemMessage-darkmode-color: var(--color-black)
+  --user-list-darktheme: var(--color-off-white)
 }
