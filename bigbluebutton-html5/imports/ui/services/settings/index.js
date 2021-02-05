@@ -36,7 +36,7 @@ class Settings {
     defaultValues.application.locale = navigator.languages ? navigator.languages[0] : false
       || navigator.language
       || defaultValues.application.locale;
-
+    defaultValues.application.darkMode=false;
     this.setDefault(defaultValues);
   }
 
