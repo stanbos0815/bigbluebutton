@@ -56,9 +56,13 @@ class Settings {
   handleDarkMode(darkMode){
     if(darkMode){
       document.documentElement.style.setProperty('--color-chat', getComputedStyle(document.body).getPropertyValue('--color-black'));
+      document.documentElement.style.setProperty('--color-background', getComputedStyle(document.body).getPropertyValue('--color-darkmode-background'));
+      document.documentElement.style.setProperty('--systemMessage-background-color-darkmode', getComputedStyle(document.body).getPropertyValue('--color-darkmode-background'));
     }
     else{
       document.documentElement.style.setProperty('--color-chat', getComputedStyle(document.body).getPropertyValue('--color-white'));
+      document.documentElement.style.setProperty('--color-background', getComputedStyle(document.body).getPropertyValue('--color-gray'));
+      document.documentElement.style.setProperty('--systemMessage-background-color-darkmode', getComputedStyle(document.body).getPropertyValue('--color-white'));
     }
   }
   
