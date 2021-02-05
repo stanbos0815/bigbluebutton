@@ -2,7 +2,7 @@ import BASIC from "./basic";
 
 export default {
   ...BASIC,
-  background: '#000',
-  "background-color": '#000',
+  background: '#555',
+  "background-color": '#555',
   color: '#eee',
 };
