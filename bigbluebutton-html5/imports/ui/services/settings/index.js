@@ -96,13 +96,13 @@ function expandedLog(item, maxDepth = 100, depth = 0){
       console.log(item);
   }
 }
-function handleDarkMode(darkMode){
+/*function handleDarkMode(darkMode){
   if(darkMode){
   document.documentElement.style.setProperty('--color-chat', getComputedStyle(document.body).getPropertyValue('--color-black'));
   }
   else{
     document.documentElement.style.setProperty('--color-chat', getComputedStyle(document.body).getPropertyValue('--color-white'));
   }
-}
+}*/
 const SettingsSingleton = new Settings(Meteor.settings.public.app.defaultSettings);
 export default SettingsSingleton;
