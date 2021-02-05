@@ -53,12 +53,22 @@ class Settings {
 
     this.save();
   }
-
+  handleDarkMode(darkMode){
+    if(darkMode){
+      document.documentElement.style.setProperty('--color-chat', getComputedStyle(document.body).getPropertyValue('--color-black'));
+    }
+    else{
+      document.documentElement.style.setProperty('--color-chat', getComputedStyle(document.body).getPropertyValue('--color-white'));
+    }
+  }
+  
   save() {
     console.log(expandedLog(Storage.getItem("settings_application"),100,0));
-    // if(Storage.getItem("settings_application").darkMode!==this["_application"].value.darkMode){
-    //   this.handleDarkMode(this["_application"].value.darkMode);
-    // }
+
+    if(Storage.getItem("settings_application").darkMode!==this["_application"].value.darkMode){
+       this.handleDarkMode(this["_application"].value.darkMode);
+    }
+    
     Object.keys(this).forEach((k) => {
       console.log(k);
       console.log(`settings${k}`);
@@ -96,13 +106,6 @@ function expandedLog(item, maxDepth = 100, depth = 0){
       console.log(item);
   }
 }
-/*function handleDarkMode(darkMode){
-  if(darkMode){
-  document.documentElement.style.setProperty('--color-chat', getComputedStyle(document.body).getPropertyValue('--color-black'));
-  }
-  else{
-    document.documentElement.style.setProperty('--color-chat', getComputedStyle(document.body).getPropertyValue('--color-white'));
-  }
-}*/
+
 const SettingsSingleton = new Settings(Meteor.settings.public.app.defaultSettings);
 export default SettingsSingleton;
