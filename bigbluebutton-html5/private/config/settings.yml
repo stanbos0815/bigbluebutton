@@ -43,6 +43,7 @@ public:
         animations: true
         chatAudioAlerts: false
         chatPushAlerts: false
+        darkMode: false
         userJoinAudioAlerts: false
         userJoinPushAlerts: false
         fallbackLocale: en
