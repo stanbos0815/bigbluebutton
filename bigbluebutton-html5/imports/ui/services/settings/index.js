@@ -72,11 +72,11 @@ class Settings {
   
   save() {
     console.log("shiaat")
-    if(Storage.getItem("settings_application").darkMode){
+    /*if(Storage.getItem("settings_application").darkMode){
       if(Storage.getItem("settings_application").darkMode!==this["_application"].value.darkMode){
         this.handleDarkMode(this["_application"].value.darkMode);
       }
-    }
+    }*/
     
     Object.keys(this).forEach((k) => {
       console.log(k);
@@ -89,6 +89,8 @@ class Settings {
 
     SETTINGS.forEach((e) => {
       userSettings[e] = this[e];
+      console.log("SettingsForEach")
+      console.log(expandedLog(e,100,0))
     });
 
     Tracker.autorun((c) => {
