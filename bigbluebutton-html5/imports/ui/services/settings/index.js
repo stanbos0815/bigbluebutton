@@ -72,11 +72,7 @@ class Settings {
   
   save() {
     console.log("shiaat")
-    /*if(Storage.getItem("settings_application").darkMode){
-      if(Storage.getItem("settings_application").darkMode!==this["_application"].value.darkMode){
-        this.handleDarkMode(this["_application"].value.darkMode);
-      }
-    }*/
+    
     
     Object.keys(this).forEach((k) => {
       console.log(k);
@@ -84,7 +80,11 @@ class Settings {
       console.log(this[k].value);
       Storage.setItem(`settings${k}`, this[k].value);
     });
-
+    if(Storage.getItem("settings_application")!=null){
+      if(Storage.getItem("settings_application").darkMode!==this["_application"].value.darkMode){
+        this.handleDarkMode(this["_application"].value.darkMode);
+      }
+    }
     const userSettings = {};
 
     SETTINGS.forEach((e) => {
