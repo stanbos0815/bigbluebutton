@@ -33,12 +33,16 @@
   --color-transparent: #ff000000;
 
   --color-chat: var(--color-white);
-  
+  --color-input:var(--color-white);
+  --color-input-text:var(--color-text);
   --color-standard-background:#06172a;
 
+  
   --color-darkmode-background: #2b2b2b;
   --color-darkmode-chat: #313335;
   --systemMessage-darkmode-background-color: var(--color-white);
   --systemMessage-darkmode-color: var(--color-black);
   --user-list-darktheme: var(--color-off-white);
+  --color-darkmode-input:#45494a;
+  --color-darkmode-input-text:var(--color-white);
 }

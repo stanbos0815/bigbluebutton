@@ -36,6 +36,7 @@ class Settings {
     defaultValues.application.locale = navigator.languages ? navigator.languages[0] : false
       || navigator.language
       || defaultValues.application.locale;
+    defaultValues.application.darkMode=false;
     this.setDefault(defaultValues);
   }
 
@@ -59,6 +60,8 @@ class Settings {
       document.documentElement.style.setProperty('--systemMessage-darkmode-background-color', getComputedStyle(document.body).getPropertyValue('--color-darkmode-background'));
       document.documentElement.style.setProperty('--systemMessage-darkmode-color', getComputedStyle(document.body).getPropertyValue('--color-white'));
       document.documentElement.style.setProperty('--user-list-darktheme', getComputedStyle(document.body).getPropertyValue('--color-darkmode-background'));
+      document.documentElement.style.setProperty('--color-input', getComputedStyle(document.body).getPropertyValue('--color-darkmode-input'));
+      document.documentElement.style.setProperty('--color-input-text', getComputedStyle(document.body).getPropertyValue('--color-white'));
 
     }
     else{
@@ -67,24 +70,24 @@ class Settings {
       document.documentElement.style.setProperty('--systemMessage-darkmode-background-color', getComputedStyle(document.body).getPropertyValue('--color-white'));
       document.documentElement.style.setProperty('--systemMessage-darkmode-color', getComputedStyle(document.body).getPropertyValue('--color-black'));
       document.documentElement.style.setProperty('--user-list-darktheme', getComputedStyle(document.body).getPropertyValue('--color-off-white'));
+      document.documentElement.style.setProperty('--color-input', getComputedStyle(document.body).getPropertyValue('--color-white'));
+      document.documentElement.style.setProperty('--color-input-text', getComputedStyle(document.body).getPropertyValue('--color-text'));
     }
   }
   
   save() {
-    console.log("shiaat")
-    
-    
+
+
     Object.keys(this).forEach((k) => {
       console.log(k);
       console.log(`settings${k}`);
       console.log(this[k].value);
       Storage.setItem(`settings${k}`, this[k].value);
     });
-    if(Storage.getItem("settings_application")!=null){
-      if(Storage.getItem("settings_application").darkMode!==this["_application"].value.darkMode){
-        this.handleDarkMode(this["_application"].value.darkMode);
-      }
-    }
+
+
+    this.handleDarkMode(this["_application"].value.darkMode);
+
     const userSettings = {};
 
     SETTINGS.forEach((e) => {
