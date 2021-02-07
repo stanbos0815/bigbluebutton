@@ -36,7 +36,6 @@ class Settings {
     defaultValues.application.locale = navigator.languages ? navigator.languages[0] : false
       || navigator.language
       || defaultValues.application.locale;
-    defaultValues.application.darkMode=false;
     this.setDefault(defaultValues);
   }
 
@@ -73,9 +72,10 @@ class Settings {
   
   save() {
     console.log(expandedLog(Storage.getItem("settings_application"),100,0));
-
-    if(Storage.getItem("settings_application").darkMode!==this["_application"].value.darkMode){
-       this.handleDarkMode(this["_application"].value.darkMode);
+    if(Storage.getItem("settings_application").darkMode){
+      if(Storage.getItem("settings_application").darkMode!==this["_application"].value.darkMode){
+        this.handleDarkMode(this["_application"].value.darkMode);
+      }
     }
     
     Object.keys(this).forEach((k) => {
