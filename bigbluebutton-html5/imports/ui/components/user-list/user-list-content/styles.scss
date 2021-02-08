@@ -20,7 +20,7 @@
 .scrollableList {
   @include elementFocus(var(--list-item-bg-hover));
   @include scrollbox-vertical(var(--user-list-bg));
-  background-color: var(--color-background-scrollablelist);
+  background: var(--color-background-scrollablelist);
   @include highContrastOutline();
 
   &:focus-within,
