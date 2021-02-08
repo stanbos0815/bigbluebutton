@@ -30,3 +30,11 @@
     }
   }
 }
+
+.icon{
+  color: var(--color-icon) !important;
+}
+
+.button:hover{
+  background-color: var(--background-icon) !important;
+}
