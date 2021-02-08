@@ -43,6 +43,13 @@
   --list-item-hover: #dce4ed;
   --color-background-scrollablelist: var(--color-white);
   --color-chat-box:var(--list-item-bg-hover);
+  --color-userlistPad: var(--color-off-white);
+  --color-background-messageList: var(--color-white);
+  --color-hide-chat:var(--color-white);
+  --background-icon: transparent;
+  --color-icon: var(--color-gray-dark);
+  --color-btn-hide-chat:var(--color-dark-grey);
+  --color-btn-hide-text:var(--color-black);
   
   --color-darkmode-background: #2b2b2b;
   --color-darkmode-chat: #313335;
@@ -54,4 +61,8 @@
   // --color-darkmode-input-text:var(--color-white);
   --list-item-darkmode-hover: #00417a;
   --color-background-darkmode-scrollablelist: var(--color-darkmode-background);
+  --color-darkmode-userlistPad: #444;
+  --color-background-darkmode-messageList: var(--color-darkmode-chat);
+  --background-darktheme-icon: #00417a;
+  --color-darktheme-icon: var(--color-white);
 }
