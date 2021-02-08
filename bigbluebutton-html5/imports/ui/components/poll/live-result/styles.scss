@@ -110,6 +110,7 @@
 }
 
 .theading {
+  color:var(--color-btn-hide-chat);
   text-align: left;
 
   [dir="rtl"] & {
@@ -128,11 +129,13 @@
 
 .resultRight,
 .resultLeft {
+  color:var(--color-btn-hide-chat);
   padding-bottom: .25rem;
   word-break: break-all;
 }
 
 .status {
+  color:var(--color-btn-hide-chat);
   margin-top: .5rem;
   margin-bottom: .5rem;
 }
