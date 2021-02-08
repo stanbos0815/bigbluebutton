@@ -61,7 +61,13 @@ class Settings {
       document.documentElement.style.setProperty('--systemMessage-darkmode-color', getComputedStyle(document.body).getPropertyValue('--color-white'));
       document.documentElement.style.setProperty('--user-list-darktheme', getComputedStyle(document.body).getPropertyValue('--color-darkmode-background'));
       document.documentElement.style.setProperty('--color-input', getComputedStyle(document.body).getPropertyValue('--color-darkmode-input'));
-      document.documentElement.style.setProperty('--color-input-text', getComputedStyle(document.body).getPropertyValue('--color-white'));
+      document.documentElement.style.setProperty('--color-theme-text', getComputedStyle(document.body).getPropertyValue('--color-white'));
+      document.documentElement.style.setProperty('--list-item-hover', getComputedStyle(document.body).getPropertyValue('--list-item-darkmode-hover'));
+      document.documentElement.style.setProperty('--color-chat-thumbnail', getComputedStyle(document.body).getPropertyValue('--color-white'));
+      document.documentElement.style.setProperty('--color-small-title', getComputedStyle(document.body).getPropertyValue('--color-white'));
+      document.documentElement.style.setProperty('--color-chat-name-main', getComputedStyle(document.body).getPropertyValue('--color-white'));
+      document.documentElement.style.setProperty('--color-chat-box', getComputedStyle(document.body).getPropertyValue('--color-darkmode-chat'));
+      document.documentElement.style.setProperty('--color-background-scrollablelist', getComputedStyle(document.body).getPropertyValue('--color-background-darkmode-scrollablelist'));
 
     }
     else{
@@ -71,7 +77,13 @@ class Settings {
       document.documentElement.style.setProperty('--systemMessage-darkmode-color', getComputedStyle(document.body).getPropertyValue('--color-black'));
       document.documentElement.style.setProperty('--user-list-darktheme', getComputedStyle(document.body).getPropertyValue('--color-off-white'));
       document.documentElement.style.setProperty('--color-input', getComputedStyle(document.body).getPropertyValue('--color-white'));
-      document.documentElement.style.setProperty('--color-input-text', getComputedStyle(document.body).getPropertyValue('--color-text'));
+      document.documentElement.style.setProperty('--color-theme-text', getComputedStyle(document.body).getPropertyValue('--color-text'));
+      document.documentElement.style.setProperty('--list-item-hover', getComputedStyle(document.body).getPropertyValue('--list-item-bg-hover'));
+      document.documentElement.style.setProperty('--color-chat-thumbnail', getComputedStyle(document.body).getPropertyValue('--color-gray-light'));
+      document.documentElement.style.setProperty('--color-small-title', getComputedStyle(document.body).getPropertyValue('--color-gray-light'));
+      document.documentElement.style.setProperty('--color-chat-name-main', getComputedStyle(document.body).getPropertyValue('--color-gray-dark'));
+      document.documentElement.style.setProperty('--color-chat-box', getComputedStyle(document.body).getPropertyValue('--list-item-bg-hover'));
+      document.documentElement.style.setProperty('--color-background-scrollablelist', getComputedStyle(document.body).getPropertyValue('--color-white'));
     }
   }
   

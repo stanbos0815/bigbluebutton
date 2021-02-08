@@ -34,9 +34,15 @@
 
   --color-chat: var(--color-white);
   --color-input:var(--color-white);
-  --color-input-text:var(--color-text);
+  --color-theme-text:var(--color-text);
+  // --color-input-text:var(--color-text);
   --color-standard-background:#06172a;
-
+  --color-chat-thumbnail:var(--color-gray-light);
+  --color-small-title:var(--color-gray-light);
+  --color-chat-name-main:var(--color-gray-dark);
+  --list-item-hover: #dce4ed;
+  --color-background-scrollablelist: var(--color-white);
+  --color-chat-box:var(--list-item-bg-hover);
   
   --color-darkmode-background: #2b2b2b;
   --color-darkmode-chat: #313335;
@@ -44,5 +50,8 @@
   --systemMessage-darkmode-color: var(--color-black);
   --user-list-darktheme: var(--color-off-white);
   --color-darkmode-input:#45494a;
-  --color-darkmode-input-text:var(--color-white);
+  --color-darkmode-text:var(--color-white);
+  // --color-darkmode-input-text:var(--color-white);
+  --list-item-darkmode-hover: #00417a;
+  --color-background-darkmode-scrollablelist: var(--color-darkmode-background);
 }

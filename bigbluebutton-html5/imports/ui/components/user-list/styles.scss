@@ -64,7 +64,8 @@
 
   &:hover {
     @include highContrastOutline();
-    background-color: var(--list-item-bg-hover);
+    // background-color: var(--list-item-bg-hover);
+    background-color: var(--list-item-hover);
   }
 
   &:active,
@@ -139,7 +140,7 @@
   text-transform: uppercase;
   padding: 0 var(--sm-padding-x);
   margin: 0 0 (var(--lg-padding-x) / 2) 0;
-  color: var(--color-gray);
+  color: var(--color-small-title);
 }
 
 .userListColumn {
