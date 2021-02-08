@@ -25,8 +25,8 @@
   &:hover,
   &:focus {
     > span:first-child {
-      // background-color: transparent !important;
-      background-color: var(--background-icon) !important;
+      background-color: transparent !important;
+      // background-color: var(--background-icon) !important;
     }
   }
 }
@@ -35,10 +35,5 @@
     i {
       color: var(--color-icon) !important;
       background-color: transparent !important;
-    }
-
-    &:hover,
-    &:focus {
-      background-color: var(--background-icon) !important;
     }
 }
