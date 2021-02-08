@@ -59,7 +59,7 @@
   padding-left: var(--lg-padding-y);
   text-decoration: none;
   width: 100%;
-  color: var(--color-gray-dark);
+  color: var(--color-small-title);
   background-color: var(--color-background-listItem);
   // background-color: var(--color-off-white);
 
@@ -83,7 +83,7 @@
   > span {
     font-weight: 400;
     font-size: var(--font-size-small);
-    color: var(--color-gray-dark);
+    color: var(--color-btn-hide-text);
     position: relative;
     flex-grow: 1;
     line-height: 2;
