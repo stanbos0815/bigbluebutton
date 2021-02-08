@@ -36,8 +36,10 @@
       color: var(--color-icon) !important;
       background-color: transparent !important;
     }
-    &:hover,
-    &:focus {
-      background-color: transparent !important;
+    span {
+      &:hover,
+      &:focus {
+        background-color: var(--background-icon) !important;
+      }
     }
 }
