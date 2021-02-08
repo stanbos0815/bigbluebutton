@@ -72,7 +72,7 @@ class Settings {
       document.documentElement.style.setProperty('--color-userlistPad', getComputedStyle(document.body).getPropertyValue('--color-darkmode-userlistPad'));
       document.documentElement.style.setProperty('--color-theme-text', getComputedStyle(document.body).getPropertyValue('--color-white'));
       document.documentElement.style.setProperty('--color-background-messageList', getComputedStyle(document.body).getPropertyValue('--color-background-darkmode-messageList'));
-      document.documentElement.style.setProperty('--color-hide-chat', getComputedStyle(document.body).getPropertyValue('-color-darkmode-input'));
+      document.documentElement.style.setProperty('--color-hide-chat', getComputedStyle(document.body).getPropertyValue('--color-darkmode-chat'));
       document.documentElement.style.setProperty('--color-btn-hide-chat', getComputedStyle(document.body).getPropertyValue('-color-white'));
       document.documentElement.style.setProperty('--color-icon', getComputedStyle(document.body).getPropertyValue('--color-darkmode-icon'));
       document.documentElement.style.setProperty('--background-icon', getComputedStyle(document.body).getPropertyValue('--background-darkmode-icon'));
