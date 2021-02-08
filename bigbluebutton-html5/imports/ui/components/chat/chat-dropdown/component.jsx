@@ -9,6 +9,7 @@ import DropdownContent from '/imports/ui/components/dropdown/content/component';
 import DropdownList from '/imports/ui/components/dropdown/list/component';
 import DropdownListItem from '/imports/ui/components/dropdown/list/item/component';
 import Button from '/imports/ui/components/button/component';
+import { styles } from './styles.scss';
 
 import ChatService from '../service';
 
