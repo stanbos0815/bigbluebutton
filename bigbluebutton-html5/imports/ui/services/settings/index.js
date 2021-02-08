@@ -77,6 +77,7 @@ class Settings {
       document.documentElement.style.setProperty('--color-icon', getComputedStyle(document.body).getPropertyValue('--color-darkmode-icon'));
       document.documentElement.style.setProperty('--background-icon', getComputedStyle(document.body).getPropertyValue('--background-darkmode-icon'));
       document.documentElement.style.setProperty('--color-btn-hide-text', getComputedStyle(document.body).getPropertyValue('--color-white'));
+      document.documentElement.style.setProperty('--color-background-listItem', getComputedStyle(document.body).getPropertyValue('--color-background-darkmode-listItem'));
     }
     else{
       document.documentElement.style.setProperty('--color-chat', getComputedStyle(document.body).getPropertyValue('--color-white'));
@@ -101,6 +102,7 @@ class Settings {
       document.documentElement.style.setProperty('--color-icon', getComputedStyle(document.body).getPropertyValue('--color-gray-dark'));
       document.documentElement.style.setProperty('--background-icon', getComputedStyle(document.body).getPropertyValue('transparent'));
       document.documentElement.style.setProperty('--color-btn-hide-text', getComputedStyle(document.body).getPropertyValue('--color-black'));
+      document.documentElement.style.setProperty('--color-background-listItem', getComputedStyle(document.body).getPropertyValue('--color-off-white'));
     }
   }
   
